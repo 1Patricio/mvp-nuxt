@@ -1,9 +1,7 @@
 <template>
   <UPageHero
     title="Welcome!"
-    headline="New release"
     orientation="horizontal"
-    :links="links"
     :ui="{
       container: 'lg:pb-16'
     }"
@@ -24,15 +22,3 @@
     />
   </UPageHero>
 </template>
-
-<script setup lang="ts">
-import type { ButtonProps } from '@nuxt/ui'
-
-const links = ref<ButtonProps[]>([
-  {
-    label: 'Saber mair',
-    to: '/docs/getting-started',
-    icon: 'i-lucide-square-play'
-  },
-])
-</script>

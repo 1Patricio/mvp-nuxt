@@ -29,6 +29,10 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: '#skills',
   },
   {
+    label: 'About',
+    to: '#about',
+  },
+  {
     label: 'Github',
     to: 'https://github.com/1Patricio',
     target: '_blank',
