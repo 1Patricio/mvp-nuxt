@@ -6,7 +6,8 @@
     :features="features"
     :links="links"
   >
-    <img
+    <nuxt-img
+    v-if="avatar"
       :src="avatar"
       width="352"
       height="647"
@@ -50,9 +51,7 @@ interface GithubUser {
   [key: string]: unknown
 }
 
-const { data } = await useFetch<GithubUser>(
-  'https://api.github.com/users/1patricio'
-)
+const { data } = await useFetch<GithubUser>('https://api.github.com/users/1patricio')
 
 const avatar = computed(() => data.value?.avatar_url || '')
 const bio = computed(() => data.value?.bio || 'Software Developer')

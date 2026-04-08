@@ -16,6 +16,7 @@
           :src="card.image.path" 
           alt="Card Cover" 
           class="w-full object-cover" 
+          loading="lazy"
         />
 
         <video

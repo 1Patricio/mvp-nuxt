@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   ssr: true,
+  runtimeConfig: {
+    public: {
+      githubToken: process.env.NUXT_PUBLIC_GITHUB_TOKEN
+    }
+  },
   modules: [
     '@nuxt/eslint',
     '@nuxt/hints',
