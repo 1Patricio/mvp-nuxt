@@ -29,5 +29,11 @@ export default defineNuxtConfig({
   },
   ogImage: {
     enabled: true
+  },
+  nitro: {
+    preset: 'netlify',
+    prerender: {
+      routes: ['/']
+    }
   }
 })
