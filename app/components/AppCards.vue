@@ -2,7 +2,7 @@
   <UContainer>
     <UPageCTA 
       title="My Projects"
-      description="Conheça os cases de sucesso da nossa empresa"
+      description="Discover my personal projects"
       variant="naked"
     />
     <UPageGrid>
@@ -13,9 +13,18 @@
       >
         <nuxt-img 
           v-if="card.image"
-          :src="card.image.path " 
-          alt="Tailwind CSS" 
-          class="w-full" 
+          :src="card.image.path" 
+          alt="Card Cover" 
+          class="w-full object-cover" 
+        />
+
+        <video
+          v-else-if="card.video"
+          :src="card.video.path"
+          class="w-full object-cover"
+          playsinline
+          muted
+          autoplay
         />
       </UPageCard>
     </UPageGrid>
@@ -38,26 +47,26 @@ const cards = ref([
     orientation: 'vertical' as const
   },
   {
-    title: 'Site Abaetéfest',
-    description: 'Site do maior app de festa.',
+    title: 'MVP Rick and Morty!',
+    description: 'Component-based architecture (SFCs), organized routing, reusable layout, and use of DaisyUI | Tailwind for visual consistency. I followed SEO best practices, accessibility, and asynchronous loading, focusing on clean code and performance',
     icon: 'i-lucide-swatch-book',
-    to: 'https://app.abaetefest.com.br/',
+    to: 'https://rickandmortymvp.netlify.app/',
     target: '_blank',
     class:'hover:bg-neutral-100',
-    image: {
-      path: '/abaetefest.png',
+    video: {
+      path: '/mvp-rick-and-morty.mp4'
     },
     orientation: 'vertical' as const
   },
   {
-    title: 'App de Festa',
-    description: 'Learn how to customize Nuxt UI components using Tailwind CSS.',
+    title: 'Cards Marketplace!',
+    description: 'Developed a Vue.js Trading Card Marketplace. Built with TypeScript, Pinia, and Quasar Framework for a responsive UI. Features secure routing (auth guards) and optimized loading via Virtual Scroll.',
     icon: 'i-lucide-swatch-book',
-    to: 'https://play.google.com/store/apps/details?id=br.com.abaetefest.app.twa&hl=pt_BR',
+    to: 'https://github.com/1Patricio/cards-marketplace',
     target: '_blank',
     class:'hover:bg-neutral-100',
-    image: {
-      path: '/app-fest.png',
+    video: {
+      path: '/cards-marketplace.mp4'
     },
     orientation: 'vertical' as const
   },
