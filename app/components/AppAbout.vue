@@ -6,8 +6,7 @@
     :features="features"
     :links="links"
   >
-    <nuxt-img
-    v-if="avatar"
+    <img
       :src="avatar"
       width="352"
       height="647"
@@ -51,7 +50,14 @@ interface GithubUser {
   [key: string]: unknown
 }
 
-const { data } = await useFetch<GithubUser>('https://api.github.com/users/1patricio')
+const config = useRuntimeConfig()
+
+const { data } = await useFetch<GithubUser>('https://api.github.com/users/1patricio', {
+  headers: config.public.githubToken ? {
+    'Authorization': `Bearer ${config.public.githubToken}`
+  } : {}
+})
+
 
 const avatar = computed(() => data.value?.avatar_url || '')
 const bio = computed(() => data.value?.bio || 'Software Developer')
