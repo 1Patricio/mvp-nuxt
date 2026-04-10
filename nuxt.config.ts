@@ -34,7 +34,7 @@ export default defineNuxtConfig({
     }
   },
   site:{
-    url: 'https://portifolio-anderson-patricio.netlify.app',
+    url: 'https://andersongoularte.netlify.app/',
     name: 'Portfolio Anderson Patricio',
     description: 'Portfolio created with Vue, Nuxt, and Nuxt UI.',
     keywords: 'vue, vuejs, nuxt, nuxtui'
