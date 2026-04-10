@@ -26,6 +26,7 @@
           playsinline
           muted
           autoplay
+          aria-hidden="true"
         />
       </UPageCard>
     </UPageGrid>
