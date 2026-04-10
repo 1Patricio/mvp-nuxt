@@ -26,3 +26,6 @@ logs
 
 # IDEs
 .vscode/
+
+# Netlify
+.netlify/

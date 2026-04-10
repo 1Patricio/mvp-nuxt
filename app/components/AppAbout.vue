@@ -6,12 +6,12 @@
     :features="features"
     :links="links"
   >
-    <img
+    <NuxtImg
       :src="avatar"
       width="352"
-      height="647"
+      height="430"
       alt="Illustration"
-      class="w-full rounded-lg"
+      class="w-full max-w-sm md:max-w-sm lg:max-w-md rounded-lg"
       loading="lazy"
     />
   </UPageSection>
