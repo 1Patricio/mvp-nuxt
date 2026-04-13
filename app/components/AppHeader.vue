@@ -6,7 +6,15 @@
 
     <UNavigationMenu :items="items" />
 
-    <template #right> 
+    <template #right>
+      <UButton
+        to="https://andersonpatricio.netlify.app/#/"
+        target="_blank"
+        variant="outline"
+        size="sm"
+        label="Português"
+        icon="mdi:translate"
+      />
       <UColorModeButton />
     </template>
 
