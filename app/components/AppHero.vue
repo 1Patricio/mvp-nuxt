@@ -18,7 +18,7 @@
     <nuxt-img
       src="/me.jpg"
       alt="Photo Profile"
-      class="rounded-lg shadow-2xl ring ring-default"
+      class="rounded-lg shadow-2xl ring ring-default w-full max-w-xs md:max-w-sm lg:max-w-md"
     />
   </UPageHero>
 </template>
